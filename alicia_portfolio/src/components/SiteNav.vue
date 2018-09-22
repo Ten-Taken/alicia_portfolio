@@ -6,23 +6,23 @@
     tabs
   >
     <v-toolbar-side-icon></v-toolbar-side-icon>
-
-    <v-toolbar-title>{{ appTitle }}</v-toolbar-title>
+    <v-spacer></v-spacer>
+    <v-toolbar-title
+      :class="{
+        'display-3': $vuetify.breakpoint.lgAndUp,
+        'display-2': $vuetify.breakpoint.mdOnly,
+        'headline': $vuetify.breakpoint.smAndDown
+      }"
+      class="custom-font">
+      {{ appTitle }}
+    </v-toolbar-title>
 
     <v-spacer></v-spacer>
-
-    <v-btn icon>
-      <v-icon>search</v-icon>
-    </v-btn>
-
-    <v-btn icon>
-      <v-icon>more_vert</v-icon>
-    </v-btn>
 
     <v-tabs
       slot="extension"
       v-model="tabsModel"
-      centered
+      right
       color="cyan"
       slider-color="yellow"
     >
@@ -30,23 +30,12 @@
         v-for="(section, index) in navSections"
         :key="index"
         :href="`#tab-${section.name}`"
+        :to="section.route"
       >
         {{ section.name }}
       </v-tab>
     </v-tabs>
   </v-toolbar>
-
-  <v-tabs-items v-model="tabsModel">
-    <v-tab-item
-      v-for="i in 3"
-      :id="`tab-${i}`"
-      :key="i"
-    >
-      <v-card flat>
-        <v-card-text v-text="text"></v-card-text>
-      </v-card>
-    </v-tab-item>
-  </v-tabs-items>
 </div>
 </template>
 
@@ -67,10 +56,26 @@ export default {
       let sectionArray
 
       sectionArray = [
-        {name: 'About'},
-        {name: 'Portfolio'},
-        {name: 'Contact'},
-        {name: 'Resume'}
+        {
+          name: 'Home',
+          route: '/home'
+        },
+        {
+          name: 'About',
+          route: '/about'
+        },
+        {
+          name: 'Portfolio',
+          route: '/portfolio'
+        },
+        {
+          name: 'Contact',
+          route: '/contact'
+        },
+        {
+          name: 'Resume',
+          route: '/resume'
+        }
       ]
       return sectionArray
     }
@@ -82,5 +87,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .custom-font {
+    font-family: sans-serif !important;
+  }
 </style>
