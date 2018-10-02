@@ -1,45 +1,47 @@
 <template>
-  <div>
-  <v-toolbar
-    color="cyan"
-    dark
-    tabs
-  >
-    <v-toolbar-side-icon></v-toolbar-side-icon>
-    <v-spacer></v-spacer>
-    <v-toolbar-title
-      :class="{
-        'display-3': $vuetify.breakpoint.lgAndUp,
-        'display-2': $vuetify.breakpoint.mdOnly,
-        'headline': $vuetify.breakpoint.smAndDown
-      }"
-      class="custom-font">
-      {{ appTitle }}
-    </v-toolbar-title>
+  <v-layout row>
+    <v-flex xs12>
+      <div>
+        <v-toolbar
+          color="cyan"
+          dark
+          tabs
+        >
+          <v-avatar
+            :tile="false"
+            :size="avatarSize"
+            color="grey lighten-4"
+            class=" ml-0"
+          >
+            <img :src="aliciaAvatar" alt="avatar">
+          </v-avatar>
+          <v-spacer></v-spacer>
 
-    <v-spacer></v-spacer>
+          <v-tabs
+            v-model="tabsModel"
+            right
+            color="cyan"
+            slider-color="yellow"
+          >
+            <v-tab
+              v-for="(section, index) in navSections"
+              :key="index"
+              :href="`#tab-${section.name}`"
+              :to="section.route"
+            >
+              {{ section.name }}
+            </v-tab>
+          </v-tabs>
+        </v-toolbar>
+      </div>
+    </v-flex>
+  </v-layout>
 
-    <v-tabs
-      slot="extension"
-      v-model="tabsModel"
-      right
-      color="cyan"
-      slider-color="yellow"
-    >
-      <v-tab
-        v-for="(section, index) in navSections"
-        :key="index"
-        :href="`#tab-${section.name}`"
-        :to="section.route"
-      >
-        {{ section.name }}
-      </v-tab>
-    </v-tabs>
-  </v-toolbar>
-</div>
 </template>
 
 <script>
+import AliciaAvatar from '@/assets/avatar.jpg'
+
 export default {
   name: 'SiteNav',
   components: {
@@ -48,10 +50,14 @@ export default {
   data () {
     return {
       appTitle: 'Alicia Singletary',
-      tabsModel: null
+      tabsModel: null,
+      avatarSize: '62'
     }
   },
   computed: {
+    aliciaAvatar () {
+      return AliciaAvatar
+    },
     navSections () {
       let sectionArray
 

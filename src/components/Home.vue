@@ -1,16 +1,19 @@
 <template>
-  <v-layout row>
-    <v-card xs10 offset-xs1 :height="homePageCardHeight">
+  <div>
+    <hero-parallax />
+    <!-- <v-card xs10 offset-xs1 :height="homePageCardHeight">
       Hello from home page!
-    </v-card>
-  </v-layout>
+    </v-card> -->
+  </div>
 </template>
 
 <script>
+import HeroParallax from '@/components/HeroParallax'
+
 export default {
   name: 'Home',
   components: {
-
+    HeroParallax
   },
   data () {
     return {

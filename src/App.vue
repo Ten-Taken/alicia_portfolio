@@ -22,3 +22,12 @@ export default {
   }
 }
 </script>
+
+<style>
+
+  .v-parallax__image {
+    max-width: 100%;
+    height: auto;
+  }
+
+</style>
