@@ -1,9 +1,6 @@
 <template>
   <div>
     <hero-parallax />
-    <!-- <v-card xs10 offset-xs1 :height="homePageCardHeight">
-      Hello from home page!
-    </v-card> -->
   </div>
 </template>
 
@@ -17,7 +14,7 @@ export default {
   },
   data () {
     return {
-      homePageCardHeight: 100 + '%'
+
     }
   },
   methods: {

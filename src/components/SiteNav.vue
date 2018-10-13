@@ -3,7 +3,7 @@
     <v-flex xs12>
       <div>
         <v-toolbar
-          color="cyan"
+          color="darkBlue"
           dark
           tabs
         >
@@ -20,7 +20,7 @@
           <v-tabs
             v-model="tabsModel"
             right
-            color="cyan"
+            color="darkBlue"
             slider-color="yellow"
           >
             <v-tab
@@ -64,7 +64,7 @@ export default {
       sectionArray = [
         {
           name: 'Home',
-          route: '/home'
+          route: '/'
         },
         {
           name: 'About',

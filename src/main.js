@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
+import * as directives from 'vuetify/es5/directives'
+
 import {
   Vuetify,
   VApp,
@@ -12,6 +15,7 @@ import {
   VBadge,
   VSelect,
   VParallax,
+  VImg,
   VBottomNav,
   VCheckbox,
   VRadioGroup,
@@ -43,6 +47,7 @@ Vue.use(Vuetify, {
     VMenu,
     VBadge,
     VSelect,
+    VImg,
     VParallax,
     VBottomNav,
     VCheckbox,
@@ -72,9 +77,12 @@ Vue.use(Vuetify, {
     error: '#FF5252',
     info: '#2196F3',
     success: '#4CAF50',
-    warning: '#FFC107'
+    warning: '#FFC107',
+    darkBlue: '#0c1960',
+    yellowOrange: '#dbb418'
 
-  }
+  },
+  directives
 })
 
 Vue.config.productionTip = false
@@ -84,5 +92,6 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  store
 })

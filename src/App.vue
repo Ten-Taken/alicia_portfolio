@@ -1,13 +1,16 @@
 <template>
   <v-app>
-    <site-nav />
     <v-content>
-      <router-view/>
+      <div v-resize="updateClientHeight" ref="appRef" class="liquid_height">
+        <site-nav />
+        <router-view/>
+      </div>
     </v-content>
   </v-app>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import SiteNav from '@/components/SiteNav'
 
 export default {
@@ -19,15 +22,27 @@ export default {
   name: 'App',
   components: {
     SiteNav
+  },
+  mounted () {
+    this.updateClientHeight()
+  },
+  computed: {
+
+  },
+  methods: {
+    ...mapActions([
+      'setViewportHeight'
+    ]),
+    updateClientHeight () {
+      let height = this.$refs.appRef.clientHeight
+      this.setViewportHeight(height)
+    }
   }
 }
 </script>
 
 <style>
-
-  .v-parallax__image {
-    max-width: 100%;
-    height: auto;
+  .liquid_height {
+    height: 100vh;
   }
-
 </style>
