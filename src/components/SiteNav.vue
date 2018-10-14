@@ -7,14 +7,6 @@
           dark
           tabs
         >
-          <v-avatar
-            :tile="false"
-            :size="avatarSize"
-            color="grey lighten-4"
-            class=" ml-0"
-          >
-            <img :src="aliciaAvatar" alt="avatar">
-          </v-avatar>
           <v-spacer></v-spacer>
 
           <v-tabs
@@ -40,8 +32,6 @@
 </template>
 
 <script>
-import AliciaAvatar from '@/assets/avatar.jpg'
-
 export default {
   name: 'SiteNav',
   components: {
@@ -50,14 +40,10 @@ export default {
   data () {
     return {
       appTitle: 'Alicia Singletary',
-      tabsModel: null,
-      avatarSize: '62'
+      tabsModel: null
     }
   },
   computed: {
-    aliciaAvatar () {
-      return AliciaAvatar
-    },
     navSections () {
       let sectionArray
 
