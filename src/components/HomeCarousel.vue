@@ -1,41 +1,26 @@
 <template>
   <v-dialog
-  v-model="dialog"
-  width="500"
-  >
+    v-model="dialog"
+    :width="carouselWidth">
     <v-btn
       slot="activator"
       outline
       color="darkBlue"
+      fab
       large
     >
-      Open
+      <v-icon large color="darkBlue">camera_roll</v-icon>
     </v-btn>
 
     <v-card>
-      <v-card-title
-        class="headline grey lighten-2"
-        primary-title
-      >
-        Privacy Policy
-      </v-card-title>
+      <v-carousel>
+        <v-carousel-item
+          v-for="(item,i) in items"
+          :key="i"
+          :src="item.src"
+        ></v-carousel-item>
+      </v-carousel>
 
-      <v-card-text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </v-card-text>
-
-      <v-divider></v-divider>
-
-      <v-card-actions>
-        <v-spacer></v-spacer>
-        <v-btn
-          color="primary"
-          flat
-          @click="dialog = false"
-        >
-          I accept
-        </v-btn>
-      </v-card-actions>
     </v-card>
   </v-dialog>
 </template>
@@ -48,7 +33,22 @@ export default {
   },
   data () {
     return {
-      dialog: false
+      dialog: false,
+      items: [
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
+        }
+      ],
+      carouselWidth: 800
     }
   },
   methods: {
