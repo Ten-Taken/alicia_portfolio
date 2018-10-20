@@ -81,7 +81,9 @@ Vue.use(Vuetify, {
     success: '#4CAF50',
     warning: '#FFC107',
     darkBlue: '#0c1960',
-    yellowOrange: '#dbb418'
+    blueBlue: '#074ab7',
+    yellowOrange: '#dbb418',
+    lightBlue: '#87b5ff'
 
   },
   directives
