@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card :height="getViewportHeight">
+    <v-card :height="getViewportHeight" flat>
       <v-layout row>
         <v-flex xs10 offset-xs1 sm8 offset-sm2 class="mt-5">
           <div class="display-1 darkBlue--text text-xs-center"> {{ title }}</div>
@@ -20,6 +20,8 @@
           <div class="text-xs-left"> {{ paragraph2 }}</div>
           <br>
           <div class="text-xs-left"> {{ paragraph3 }}</div>
+          <br>
+          <div class="text-xs-left"> {{ paragraph4 }}</div>
         </v-flex>
       </v-layout>
     </v-card>
@@ -38,9 +40,10 @@ export default {
   data () {
     return {
       title: 'About me',
-      paragraph1: 'Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut ninja wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit ninja lobortis nisl ut aliquip ex ea commodo consequat. Duis ninja autem vel eum iriure dolor in hendrerit in vulputate ninja velit esse molestie consequat, vel illum dolore eu feugiat nulla ninja facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam ninja ipsum liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi ninja non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes ninja demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas ninja est etiam processus dynamicus, qui ninja sequitur mutationem consuetudium lectorum. Mirum ninja est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem ninja ipsum modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in ninja futurum.',
-      paragraph2: 'atum zzril delenit augue duis dolore te feugait nulla facilisi. Nam ninja ipsum liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi ninja non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes ninja demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas ninja est etiam processus dynamicus, qui ninja sequitur mutationem consuetudium lectorum. Mirum ninja est notare quam littera gothica, q',
-      paragraph3: 'atum zzril delenit augue duis dolore te feugait nulla facilisi. Nam ninja ipsum liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi ninja non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes ninja demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas ninja est etiam processus dynamicus, qui ninja sequitur mutationem consuetudium lectorum. Mirum ninja est notare quam littera gothica, q'
+      paragraph1: 'I grew up in Tomball, Texas which is slightly north of Houston, I moved to San Marcos so I could complete my education at Texas State University.  I will graduate in December 2018 with a Bachelor of Science in Digital Media Innovation and Mass Communication. I’m looking forward to starting my career specializing in digital media in the marketing or advertising fields.',
+      paragraph2: 'My minor is in Art Design and I consider my artistic talent an asset when creating ad campaigns. I have studied art since high school and have truly enjoyed the freedom of expression it provides. I also enjoy photography where I have learned advanced skills over the years manipulating photographs with Adobe software to create designs with a message that draw audiences to the work. I also enjoy photography as a hobby, taking pictures of nature, animals and people and how they interact with one another. During my undergraduate studies, I have learned many different skills including social media advertising, web design, data research analytics, content creation, and application development to name a few. From the jobs I’ve had I’ve learned problem solving, time management, team leadership and organizational skills.  The skills I’ve learned at Texas State and through work experience, I believe have positioned me to be successful in my field where I will continue to build upon those talents.',
+      paragraph3: 'During my senior year I have been active in various school events and professional clubs including the Advertising clubs, Austin-AAF and Ad2Austin, which helps me network with professionals and build relationships in my target industry. Some of our events include community service, social gatherings and touring advertising agencies in Austin.',
+      paragraph4: 'In conclusion, I have gathered marketable skills from the Texas State Digital Media Innovation degree and several jobs worked which will allow me to find a position in the digital media marketing or advertising fields to start my career.'
 
     }
   },
