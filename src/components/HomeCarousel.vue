@@ -45,20 +45,6 @@ export default {
   data () {
     return {
       dialog: false,
-      // items: [
-      //   {
-      //     src: this.carousel0
-      //   },
-      //   {
-      //     src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
-      //   },
-      //   {
-      //     src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
-      //   },
-      //   {
-      //     src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
-      //   }
-      // ],
       carouselWidth: 800
     }
   },
