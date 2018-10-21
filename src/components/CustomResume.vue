@@ -101,17 +101,44 @@
 
     <!-- EDUCATION -->
     <div class="headline darkBlue--text"> {{ sectionTitle3 }} </div>
-    <v-layout row class="my-3">
-      <v-flex></v-flex>
-      <v-flex></v-flex>
+    <v-layout row wrap class="my-3">
+      <v-flex xs12 sm4 class="body-2 font-weight-bold">Digital Media Innovation &amp;<br>Mass Communication<br>Graduating Dec. 2018</v-flex>
+      <v-flex xs12 sm4 class="">Texas State University<br> San Marcos, TX</v-flex>
+      <v-flex xs12 sm4><em>2016 - 2018</em></v-flex>
+    </v-layout>
+    <v-layout row wrap class="my-2">
+      <v-flex xs12 sm4 class="body-2 font-weight-bold">Associate of Arts Degree</v-flex>
+      <v-flex xs12 sm4 class="">Lone Star College <br> Tomball, TX</v-flex>
+      <v-flex xs12 sm4><em>2010 - 2014</em></v-flex>
     </v-layout>
     <v-divider class="my-3"  />
+
+
     <!-- ACCOMPLISHMENTS -->
     <div class="headline darkBlue--text"> {{ sectionTitle4 }} </div>
-    <v-layout row class="my-3">
-      <v-flex></v-flex>
-      <v-flex></v-flex>
+    <v-layout row wrap class="my-3">
+      <v-flex xs12 sm6>
+        <samp class="body-2 font-weight-bold">Advertising Club</samp>
+        <ul>
+          <li>Member of the Austin-AAF and Ad2Austin</li>
+          <li>Attended social events and agency tours for young professionals</li>
+        </ul>
+      </v-flex>
     </v-layout>
+    <v-layout row wrap class="my-3">
+      <v-flex xs12 sm6>
+        <samp class="body-2 font-weight-bold">Lone Star College Recruitment Outreach and Diversity Initiatives Club</samp>
+        <ul>
+          <li>Promoted &amp; informed high school students about Lone Star College</li>
+          <li>Participated in coordinating activities with other clubs</li>
+          <li>Organized activities and setup field trips</li>
+          <li>Participated in new student orientation</li>
+        </ul>
+      </v-flex>
+    </v-layout>
+
+
+
   </div>
 </template>
 
