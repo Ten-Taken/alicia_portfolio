@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer
-    v-model="mobileNavDrawer"
+    :value="mobileNavDrawer"
     app clipped fixed temporary stateless>
   <v-toolbar flat class="darkBlue">
     <v-list>
@@ -64,13 +64,8 @@ export default {
     ...mapGetters([
       'getNavDrawer'
     ]),
-    mobileNavDrawer: {
-      get () {
-        return this.getNavDrawer
-      },
-      set (mobileNavDrawer) {
-        this.toggleNavDrawer()
-      }
+    mobileNavDrawer () {
+      return this.getNavDrawer
     }
   },
   methods: {
