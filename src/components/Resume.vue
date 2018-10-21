@@ -15,7 +15,7 @@
           <v-layout row wrap>
             <v-flex xs10 offset-xs1>
               <div class="mx-auto text-xs-left">
-                PDF Content
+                <custom-resume />
               </div>
             </v-flex>
           </v-layout>
@@ -28,11 +28,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import CustomResume from '@/components/CustomResume'
 
 export default {
   name: 'Resume',
   components: {
-
+    CustomResume
   },
   data () {
     return {
@@ -53,24 +54,5 @@ export default {
 </script>
 
 <style scoped>
-  span.cls_002{font-family:Arial,serif;font-size:14.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
-  div.cls_002{font-family:Arial,serif;font-size:14.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
-  span.cls_003{font-family:Arial,serif;font-size:10.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-  div.cls_003{font-family:Arial,serif;font-size:10.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-  span.cls_026{font-family:Arial,serif;font-size:10.0px;color:rgb(76,108,121);font-weight:normal;font-style:normal;text-decoration: underline}
-  div.cls_026{font-family:Arial,serif;font-size:10.0px;color:rgb(76,108,121);font-weight:normal;font-style:normal;text-decoration: none}
-  span.cls_007{font-family:Arial,serif;font-size:12.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
-  div.cls_007{font-family:Arial,serif;font-size:12.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
-  span.cls_009{font-family:Arial,serif;font-size:11.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-  div.cls_009{font-family:Arial,serif;font-size:11.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-  span.cls_010{font-family:Arial,serif;font-size:11.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-  div.cls_010{font-family:Arial,serif;font-size:11.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-  span.cls_015{font-family:Arial,serif;font-size:10.0px;color:rgb(87,87,87);font-weight:bold;font-style:normal;text-decoration: none}
-  div.cls_015{font-family:Arial,serif;font-size:10.0px;color:rgb(87,87,87);font-weight:bold;font-style:normal;text-decoration: none}
-  span.cls_018{font-family:Arial,serif;font-size:10.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-  div.cls_018{font-family:Arial,serif;font-size:10.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-  span.cls_025{font-family:Arial,serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-  div.cls_025{font-family:Arial,serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-  span.cls_011{font-family:Arial,serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-  div.cls_011{font-family:Arial,serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+
 </style>
