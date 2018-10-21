@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <custom-nav-drawer />
     <v-content>
       <div v-resize="updateClientHeight" ref="appRef" class="liquid_height">
         <site-nav />
@@ -12,6 +13,7 @@
 <script>
 import { mapActions } from 'vuex'
 import SiteNav from '@/components/SiteNav'
+import CustomNavDrawer from '@/components/CustomNavDrawer'
 
 export default {
   data () {
@@ -21,7 +23,8 @@ export default {
   },
   name: 'App',
   components: {
-    SiteNav
+    SiteNav,
+    CustomNavDrawer
   },
   mounted () {
     this.updateClientHeight()

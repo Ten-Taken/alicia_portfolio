@@ -12,7 +12,7 @@
             'headline': $vuetify.breakpoint.smOnly,
             'title': $vuetify.breakpoint.xsOnly
           }"
-          class="shadow_outline white--text">
+          class="shadow_outline white--text font-weight-bold">
           {{ tagline1 }} <br /> {{ tagline2 }}
         </div>
         <home-carousel />
@@ -64,6 +64,6 @@ export default {
 
 <style scoped>
   .shadow_outline {
-    text-shadow: 3px 3px #000
+    text-shadow: 2px 2px #000
   }
 </style>

@@ -7,10 +7,12 @@
           dark
           tabs
         >
+          <v-toolbar-side-icon v-if="$vuetify.breakpoint.xsOnly" @click="toggleNavDrawer" />
           <v-spacer></v-spacer>
 
           <v-tabs
             v-model="tabsModel"
+            v-if="$vuetify.breakpoint.smAndUp"
             right
             color="darkBlue"
             slider-color="yellow"
@@ -32,6 +34,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'SiteNav',
   components: {
@@ -73,7 +77,7 @@ export default {
     }
   },
   methods: {
-
+    ...mapActions(['toggleNavDrawer'])
   }
 }
 </script>
