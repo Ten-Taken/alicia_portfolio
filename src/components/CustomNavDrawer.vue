@@ -27,10 +27,10 @@
     <v-list-tile
       v-for="item in items"
       :key="item.title"
-      @click="$router.push(item.route)"
+      @click="navTo(item.route)"
     >
       <v-list-tile-action>
-        <v-icon>{{ item.icon }}</v-icon>
+        <v-icon class="lightBlue--text">{{ item.icon }}</v-icon>
       </v-list-tile-action>
 
       <v-list-tile-content>
@@ -52,11 +52,11 @@ export default {
   data () {
     return {
       items: [
-        { title: 'Home', icon: '/' },
-        { title: 'About', icon: '/about' },
-        { title: 'Portfolio', icon: '/portfolio' },
-        { title: 'Contact', icon: '/contact' },
-        { title: 'Resume', icon: '/resume' }
+        { title: 'Home', icon: 'home', route: '/' },
+        { title: 'About', icon: 'info', route: '/about' },
+        { title: 'Portfolio', icon: 'bookmarks', route: '/portfolio' },
+        { title: 'Contact', icon: 'phone', route: '/contact' },
+        { title: 'Resume', icon: 'list_alt', route: '/resume' }
       ]
     }
   },
@@ -69,7 +69,11 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['toggleNavDrawer'])
+    ...mapActions(['toggleNavDrawer']),
+    navTo (path) {
+      this.$router.push(path)
+      this.toggleNavDrawer()
+    }
   }
 }
 </script>

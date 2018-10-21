@@ -8,7 +8,8 @@
       <v-flex class="text-xs-center">
         <div
           :class="{
-            'display-1': $vuetify.breakpoint.mdAndUp,
+            'display-2': $vuetify.breakpoint.lgAndUp,
+            'display-1': $vuetify.breakpoint.mdOnly,
             'headline': $vuetify.breakpoint.smOnly,
             'title': $vuetify.breakpoint.xsOnly
           }"
@@ -16,7 +17,6 @@
           {{ tagline1 }} <br /> {{ tagline2 }}
         </div>
         <home-carousel />
-        <!-- <v-btn outline large color="darkBlue">Open</v-btn> -->
       </v-flex>
     </v-layout>
   </v-img>
