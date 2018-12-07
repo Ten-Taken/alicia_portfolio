@@ -76,7 +76,18 @@
           <v-slide-y-transition>
             <v-card-text v-show="showProject2">
               <ul class="text-xs-center">
-                Coming Soon
+                <li>
+                  <a target="_blank" href="https://prototype.aliciasingletary.me">Prototype</a>
+                </li>
+                <li>
+                  <a href="../../static/Throneberry.pdf" target="_blank">Portfolio Critique</a>
+                </li>
+                <li>
+                  <a href="../../static/research.pdf" target="_blank">Research</a>
+                </li>
+                <li>
+                  <a href="../../static/presentation.pdf" target="_blank">Presentation</a>
+                </li>
               </ul>
             </v-card-text>
           </v-slide-y-transition>
